@@ -27,7 +27,7 @@ function draw() {
 }
 
 
-function Bual() {
+function Ball() {
     this.image = new Image();
-    this.image.src = "buals.png";
+    this.image.src = "ball.png";
 }
