@@ -1,0 +1,33 @@
+
+var canvasGA = document.getElementById("gameArea");
+var ctx = canvasGA.getContext("2d");
+canvasGA.addEventListener("mousemove", setcoords, false);
+ctx.rect(0, 0, 1024, 576);
+ctx.lineWidth = "10";
+ctx.stroke();
+
+var ball = new Ball()
+ctx.drawImage("bib.png", 100, 100, 150, 150);
+
+function setcoords(){
+  var x = event.pageX;
+  var y = event.pageY;
+  ctx.drawImage("ball.png", x, y);
+
+}
+
+var FPS = 30;
+setInterval(function() {
+//  update();
+  draw();
+}, 1000/FPS);
+
+function draw() {
+  console.log("gfgff");
+}
+
+
+function Ball() {
+    this.image = new Image();
+    this.image.src = "ball.png";
+}
